@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=3cm,bottom=3cm,top=3cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{The CheRocky Project}
+\fancyhead[R]{Verbale Interno 22/11/19}
+\fancyfoot[R]{\thepage}
+% Colore rosso custom
+\definecolor{custom}{RGB}{192,53,53}
+%Header
+\renewcommand{\headrulewidth}{4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{custom}\leaders\hrule height \headrulewidth\hfill}}
+% Footer
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{custom}\leaders\hrule height \footrulewidth\hfill}}
+
+\renewcommand{\labelenumii}{\theenumii} % Per avere i menu innestati con i numeri
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.} % Per avere i menu innestati con i numeri
+
+% Colore righe tabelle
+\arrayrulecolor{custom}
+
+\begin{document}
+
+    % Frontespizio
+    \begin{titlepage}
+        \centering
+        \vspace*{\fill}
+        \begin{figure}[http]
+            \centering
+            \includegraphics[width=10cm]{logoGruppo.jpg}
+        \end{figure}
+        
+        \vspace*{0.5cm}
+    
+        \huge\bfseries\centerline{Verbale Interno 22/11/19}
+        \small{cherockyproj@gmail.com}
+        \vspace*{1cm}
+        \normalsize\mdseries{
+            \begin{center}
+                \begin{tabular}{ l || l }
+                 \bfseries Versione & 0.0.1 \\ 
+                 \bfseries Approvazione & n.d. \\  
+                 \bfseries Redazione & Mirco Giardina \\
+                 \bfseries Verifica & n.d. \\
+                 \bfseries Stato & Verificare \\
+                 \bfseries Uso & Interno \\
+                 \bfseries Destinato a & The CheRocky Project\\
+                 & Professore Tullio Vardanega \\
+                 & Professore Riccardo Cardin
+                \end{tabular}
+            \end{center}
+        }
+        
+        \vspace*{\fill}
+        {\bfseries Descrizione:}
+        Riassunto dell’incontro del gruppo The CheRocky Project tenutosi il 22/11/2019.
+    \end{titlepage}
+    
+    % Pagina cronologia modifiche
+    \vspace*{0.3cm}
+    {\Large\bfseries Cronologia delle modifiche}
+    \newline\newline
+    % Impostazioni tabella
+    \setlength{\tabcolsep}{18pt}
+    \renewcommand{\arraystretch}{1.5}
+    {\rowcolors{2}{black!5}{black!20} \normalsize\mdseries
+        \begin{tabular}{ |p{1,2cm} p{1cm} p{2,5cm} p{2cm} p{3cm}| } 
+            \hline
+            \rowcolor{custom}
+            \bfseries\leavevmode\color{white} Versione & \bfseries\leavevmode\color{white} Data & \bfseries\leavevmode\color{white} Nominativo & \bfseries\leavevmode\color{white} Ruolo & \bfseries\leavevmode\color{white} Descrizione \\
+            \hline\hline
+            0.0.1 & 23/11/19 & Mirco Giardina & Analista & Creato documento \\ 
+            \hline
+        \end{tabular}
+    }
+    
+    % Pagina indici
+    \clearpage
+    \renewcommand*\contentsname{Indice}
+    \tableofcontents
+    
+    % Contenuto
+    \newpage
+    \section{Informazioni generali}
+    \subsection{Informazioni incontro}
+    \begin{itemize}
+        {\item\bfseries Luogo:}  Aula 1C150 Torre Archimede
+        {\item\bfseries Data:} 22/11/2019
+        {\item\bfseries Ora di inizio:} 14:30
+        {\item\bfseries Ora di fine:} 17:30
+        {\item\bfseries Partecipanti:}
+            \begin{itemize}
+                \item Alessio Bettarella
+                \item Francesco Freda
+                \item Mirco Giardina
+                \item Mattia Gottardello
+                \item Daniele Larosa
+                \item Nicola Costa
+                \item Nicola Panozzo
+                \item Ilaria Peron
+            \end{itemize}
+    \end{itemize}
+    \subsection{Argomenti Trattati}
+    Lo scopo del primo incontro è stato quello di conoscersi, e di esporre opinioni ed interessi riguardanti i capitolati presentati.\'E stata stilata una lista dei nomi possibili del gruppo e scelto il più gettonato mediante una votazione anonima. Successivamente ogni membro del gruppo ha discusso pro e contro riguardo i capitolati di maggior interesse. Di comune accordo i membri del gruppo hanno deciso di partecipare a tutti i seminari tenuti dalle aziende proponenti in modo da raccogliere maggiori informazioni per poter fare una scelta consapevole. In questa fase iniziale è emerso un interesse maggiore per i capitolati C1 (Autonomous Highlights Platform) e C6 (ThiReMa - Things Relationship Management). Sono poi stati disccussi i possibili strumenti da utilizzare basandosi su ricerce online e sull'esperienza di alcuni membri del gruppo ed è stato concluso che utilizzieremo:
+	\begin{itemize}
+	    {\item\bfseries Git:} per il versionamento, inoltre consente di vedere i diff tra due versioni così da permettere al verificatore di leggere solo le correzioni apportate
+	    {\item\bfseries GitHub:} come interfaccia web e server di hosting per git; permette l'assegnazione di permessi e la gestione dei compiti mediante issues e boards.
+	    {\item\bfseries GitKraken:} come software per il computer utilizzabile senza dover passare per l'interfaccia web di github. Compatibile con i principali sistemi operativi.
+	    {\item\bfseries Google Drive:} per la condivisione di materiale all'interno del gruppo
+	    {\item\bfseries Slack:} per la comunicazione tra i membri del gruppo mediante canali suddivisi per argomento
+	\end{itemize}
+	Sono state inoltre fissate le date per le future riunioni in base agli impregni di tutti.
+	L'incontro è terminato incaricando i membri del team ad informarsi riguardo a plugin da poter utilizzare su github.
+	\newpage
+	\section{Verbale della riunione}
+	\begin{itemize}
+	    \item Primo incontro conoscitivo
+	    \item Discussione sui capitolati proposti: pro, contro ed interessi individuali
+	    \item Discussione e scelta di nome, logo ed e-mail del gruppo
+	    \item Schedulazione delle future riunioni del gruppo
+	    \item Discussione, valutazione e scelta di uno strumento per la comunicazione dei membri del gruppo (slack)
+        \item Discussione, valutazione e scelta di uno strumento per la memorizzazione e condivisione dei documenti (google drive)
+        \item Discussione, valutazione e scelta del software di controllo versione distribuito (git)
+	\end{itemize}
+    \section{Riepilogo decisioni}
+    \setlength{\tabcolsep}{18pt}
+    \renewcommand{\arraystretch}{1.5}
+    {\rowcolors{2}{black!5}{black!20} \normalsize\mdseries
+    \begin{tabular}{ |p{1,5cm} p{11,5cm}| } 
+        \hline
+        \rowcolor{custom}
+        \bfseries\leavevmode\color{white} Codice & \bfseries\leavevmode\color{white} Decisione \\
+        \hline\hline
+        VI\_1.1 & Scelto The Cherocky Project come nome del gruppo \\
+        VI\_1.2 & Scelto C1 come capitolato principale \\
+        VI\_1.3 & Scelto git come strumento di versionamento \\
+        VI\_1.4 & Scelto GitHub come servizio di host per git \\
+        VI\_1.5 & Scelto GitKraken come interfaccia software per git \\
+        VI\_1.6 & Scelto GoogleDrive come strumento di condivisione dei file \\
+        VI\_1.7 & Scelto Slack come strumento per la comunicazione all'interno del gruppo \\
+        VI\_1.8 & Scelti i giorni in cui trovarsi nelle prossime settimane \\
+        \hline
+    \end{tabular}
+    }
+\end{document}
